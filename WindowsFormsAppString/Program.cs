@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +19,10 @@ namespace WindowsFormsAppString
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCatCaract());
+            //Application.Run(new FormCatCaract());
+            //Application.Run(new FormRadioButtonNbOccurence1());
+            Application.Run(new MDIPrincipal());
+ 
         }
     }
 }
