@@ -17,7 +17,6 @@ namespace WindowsFormsAppString
         public MDIPrincipal()
         {
             InitializeComponent();
-            Debug.WriteLine("loulou");
         }
 
         private void EventOpenFormChar(object sender, EventArgs e)

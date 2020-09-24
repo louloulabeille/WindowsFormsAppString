@@ -18,6 +18,15 @@ namespace WindowsFormsAppString
             
         }
 
+        #region Validatin et valided
+        /// <summary>
+        /// Vérification de la bonne saisie de Id
+        /// 1er caractère une lettre
+        /// > 5 caractères 
+        /// caractères qui doivent être des alphanumériques
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxIdUtilisateur_Validating(object sender, CancelEventArgs e)
         {
             e.Cancel = !User.IsVerifId(textBoxIdUtilisateur.Text);
@@ -28,6 +37,12 @@ namespace WindowsFormsAppString
             textBoxMp.Focus();
         }
 
+        /// <summary>
+        /// vérification de la bonne saisie du mot de passe
+        /// 5 caractères minimum
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxMp_Validating(object sender, CancelEventArgs e)
         {
             e.Cancel = !User.IsVerifMp(textBoxMp.Text);
@@ -37,12 +52,18 @@ namespace WindowsFormsAppString
         {
             buttonConnect.Focus();
         }
+        #endregion
 
+        #region Event autre
+        /// <summary>
+        /// Verification de Id et du mot de passe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EventSeConnecter(object sender, EventArgs e)
         {
             User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
             User moi = new User("Afpa2020", "loulou", "azerty2020");
-            //this.ParentForm.Text = $"Bienvenue {moi.UserName}";
 
             if (moi.IsVerifIdMp(utilisateur))
             {
@@ -56,6 +77,9 @@ namespace WindowsFormsAppString
             }
 
         }
+        #endregion
+
+        #region Event de test
         private void EventTest(object sender, EventArgs e)
         {
             //Debug.WriteLine($"test de la méthode isverifid \"14fghf\" false : {User.IsVerifId("14fghf")}");
@@ -71,8 +95,8 @@ namespace WindowsFormsAppString
             Debug.WriteLine($"test du mot de passe 12 false = {User.IsVerifMp("12")}");
             Debug.WriteLine($"test du mot de passe 135 false = {User.IsVerifMp("135")}");
             Debug.WriteLine($"test du mot de passe 1464 false = {User.IsVerifMp("1464")}");
-            Debug.WriteLine($"test du mot de passe 14581 true = {User.IsVerifMp("14581")}");
-            Debug.WriteLine($"test du mot de passe jdfhj1 true = {User.IsVerifMp("jdfhj1")}");
+            Debug.WriteLine($"test du mot de passe 1.:81 true = {User.IsVerifMp("1.:81")}");
+            Debug.WriteLine($"test du mot de passe j7f?j1 true = {User.IsVerifMp("j7f?j1")}");
             Debug.WriteLine($"test du mot de passe kdjcfd true = {User.IsVerifMp("kdjcfd")}");
             Debug.WriteLine($"test du mot de passe Adjcfd true = {User.IsVerifMp("Adjcfd")}");
             Debug.WriteLine($"test du mot de passe 1djcfd true = {User.IsVerifMp("1djcfd")}");
@@ -84,7 +108,7 @@ namespace WindowsFormsAppString
 
 
         }
+        #endregion
 
-        
     }
 }

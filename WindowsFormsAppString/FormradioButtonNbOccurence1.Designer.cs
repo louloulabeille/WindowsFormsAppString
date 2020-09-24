@@ -59,7 +59,7 @@
             this.textBoxSaisieString.Location = new System.Drawing.Point(251, 31);
             this.textBoxSaisieString.Name = "textBoxSaisieString";
             this.textBoxSaisieString.Size = new System.Drawing.Size(407, 34);
-            this.textBoxSaisieString.TabIndex = 1;
+            this.textBoxSaisieString.TabIndex = 0;
             // 
             // label2
             // 
@@ -75,7 +75,7 @@
             this.textBoxString1.Location = new System.Drawing.Point(251, 77);
             this.textBoxString1.Name = "textBoxString1";
             this.textBoxString1.Size = new System.Drawing.Size(407, 34);
-            this.textBoxString1.TabIndex = 2;
+            this.textBoxString1.TabIndex = 1;
             // 
             // label3
             // 
@@ -91,7 +91,7 @@
             this.textBoxRemplacement2.Location = new System.Drawing.Point(251, 122);
             this.textBoxRemplacement2.Name = "textBoxRemplacement2";
             this.textBoxRemplacement2.Size = new System.Drawing.Size(407, 34);
-            this.textBoxRemplacement2.TabIndex = 3;
+            this.textBoxRemplacement2.TabIndex = 2;
             // 
             // label4
             // 
@@ -108,7 +108,7 @@
             this.textBoxResultat.Name = "textBoxResultat";
             this.textBoxResultat.ReadOnly = true;
             this.textBoxResultat.Size = new System.Drawing.Size(407, 34);
-            this.textBoxResultat.TabIndex = 1;
+            this.textBoxResultat.TabIndex = 10;
             // 
             // groupBox1
             // 

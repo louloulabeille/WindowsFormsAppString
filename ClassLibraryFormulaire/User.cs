@@ -11,8 +11,17 @@ namespace ClassLibraryFormulaire
         private string _userName;
         private string _mP;
 
+        #region pattern des expressions régulières
+        //^debut de chaine
+        //[A-Za-z] -> lettre
+        //{1} -> le nombre
+        //\w -> alphanumérique
+        //{5,} -> minimun 5
         public static string _patternID = @"^[A-Za-z]{1}\w{5,}";
-        public static string _patternMp = @"\w{5,}";
+        //. tout sauf /n => le saut de ligne
+        //{5,} -> minimun 5
+        public static string _patternMp = @".{5,}";
+        #endregion
 
         #region constructeur
 
@@ -50,7 +59,7 @@ namespace ClassLibraryFormulaire
         }
         #endregion
 
-        #region override
+        #region override des methodes Equals et GetHasCode ici id et mot de passe
         public override bool Equals(object obj)
         {
             User utilisateur = obj as User;
@@ -71,8 +80,9 @@ namespace ClassLibraryFormulaire
         }
 
         /// <summary>
-        /// méthode de vérification de Identifant 
+        /// méthode de vérification de l'Identifant 
         /// il doit être @"^[A-Za-z]{1}\w{5,}"
+        /// une lettre et 5 alphanumériques
         /// </summary>
         /// <param name="value">identifant de l'utilisateur</param>
         /// <returns></returns>
@@ -82,6 +92,11 @@ namespace ClassLibraryFormulaire
             return rgx.IsMatch(value);
         }
 
+        /// <summary>
+        /// 5 caractères
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static bool IsVerifMp (string value)
         {
             Regex rgx = new Regex(_patternMp);

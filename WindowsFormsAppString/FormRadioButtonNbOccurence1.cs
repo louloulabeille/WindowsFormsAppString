@@ -36,16 +36,10 @@ namespace WindowsFormsAppString
                                 textBoxResultat.Text = textBoxSaisieString.Text.Replace(textBoxString1.Text, textBoxRemplacement2.Text);
                                 break;
                             case "radioButtonRemplacer1ErPar2": // remplace la 1er occurence de 1 par 2
-                                int index = textBoxSaisieString.Text.IndexOf(textBoxString1.Text);
-                                textBoxResultat.Text = index > -1 ? 
-                                    (textBoxSaisieString.Text.Remove(index, textBoxString1.Text.Length)).Insert(index,textBoxRemplacement2.Text)
-                                    :"";
+                                textBoxResultat.Text = FirstReplace(textBoxSaisieString.Text, textBoxString1.Text, textBoxRemplacement2.Text);
                                 break;
                             case "radioButtonRemplacerLast1Par2":
-                                index = textBoxSaisieString.Text.LastIndexOf(textBoxString1.Text);
-                                textBoxResultat.Text = index > -1 ?
-                                    (textBoxSaisieString.Text.Remove(index, textBoxString1.Text.Length)).Insert(index, textBoxRemplacement2.Text)
-                                    : "";
+                                textBoxResultat.Text = LastReplace(textBoxSaisieString.Text, textBoxString1.Text, textBoxRemplacement2.Text);
                                 break;
                         }
                     }
@@ -53,6 +47,13 @@ namespace WindowsFormsAppString
             }
         }
 
+        #region méthode interne 
+        /// <summary>
+        /// Retourne le nombre occurence d'une chaine
+        /// </summary>
+        /// <param name="chaine">chaine de recherche</param>
+        /// <param name="recherche">élément à rechercher</param>
+        /// <returns></returns>
         private int NbOccurence(string chaine, string recherche)
         {
             int i = 0;
@@ -64,5 +65,36 @@ namespace WindowsFormsAppString
             }
             return i;
         }
+
+        /// <summary>
+        /// Recherche la première occurence et la remplace dans la chaine
+        /// </summary>
+        /// <param name="chaine">chaine de recherche</param>
+        /// <param name="rechercher">chaine à rechercher</param>
+        /// <param name="remplace">chaine de remplacement</param>
+        /// <returns></returns>
+        private string FirstReplace (string chaine, string rechercher, string remplace)
+        {
+            int index = chaine.IndexOf(rechercher);
+            return index > -1 ?
+                (chaine.Remove(index, rechercher.Length)).Insert(index, remplace)
+                : "";
+        }
+
+        /// <summary>
+        /// Recherche et remplace la dernière occurence
+        /// </summary>
+        /// <param name="chaine">chaine de recherche</param>
+        /// <param name="rechercher">chaine à rechercher</param>
+        /// <param name="remplace">chaine de remplacement</param>
+        /// <returns></returns>
+        private string LastReplace(string chaine, string rechercher, string remplace)
+        {
+            int index = chaine.LastIndexOf(rechercher);
+            return  index > -1 ?
+                (chaine.Remove(index, rechercher.Length)).Insert(index, remplace)
+                : "";
+        }
+        #endregion
     }
 }
