@@ -63,7 +63,7 @@
             this.textBoxIdUtilisateur.Name = "textBoxIdUtilisateur";
             this.textBoxIdUtilisateur.Size = new System.Drawing.Size(299, 32);
             this.textBoxIdUtilisateur.TabIndex = 0;
-            this.textBoxIdUtilisateur.Text = " ";
+            this.textBoxIdUtilisateur.Text = "";
             this.textBoxIdUtilisateur.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxIdUtilisateur_Validating);
             this.textBoxIdUtilisateur.Validated += new System.EventHandler(this.textBoxIdUtilisateur_Validated);
             // 

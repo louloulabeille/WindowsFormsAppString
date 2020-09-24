@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 21);
+            this.label1.Size = new System.Drawing.Size(198, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saisissez une chaîne : ";
             // 
@@ -58,7 +58,7 @@
             // 
             this.textBoxSaisieString.Location = new System.Drawing.Point(251, 31);
             this.textBoxSaisieString.Name = "textBoxSaisieString";
-            this.textBoxSaisieString.Size = new System.Drawing.Size(407, 29);
+            this.textBoxSaisieString.Size = new System.Drawing.Size(407, 34);
             this.textBoxSaisieString.TabIndex = 1;
             // 
             // label2
@@ -66,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 21);
+            this.label2.Size = new System.Drawing.Size(194, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Portion de chaîne 1 : ";
             // 
@@ -74,7 +74,7 @@
             // 
             this.textBoxString1.Location = new System.Drawing.Point(251, 77);
             this.textBoxString1.Name = "textBoxString1";
-            this.textBoxString1.Size = new System.Drawing.Size(407, 29);
+            this.textBoxString1.Size = new System.Drawing.Size(407, 34);
             this.textBoxString1.TabIndex = 2;
             // 
             // label3
@@ -82,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(31, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 21);
+            this.label3.Size = new System.Drawing.Size(268, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "Portion de remplacement  2 : ";
             // 
@@ -90,24 +90,24 @@
             // 
             this.textBoxRemplacement2.Location = new System.Drawing.Point(251, 122);
             this.textBoxRemplacement2.Name = "textBoxRemplacement2";
-            this.textBoxRemplacement2.Size = new System.Drawing.Size(407, 29);
+            this.textBoxRemplacement2.Size = new System.Drawing.Size(407, 34);
             this.textBoxRemplacement2.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 238);
+            this.label4.Location = new System.Drawing.Point(31, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Résultat :";
             // 
             // textBoxResultat
             // 
-            this.textBoxResultat.Location = new System.Drawing.Point(251, 235);
+            this.textBoxResultat.Location = new System.Drawing.Point(251, 185);
             this.textBoxResultat.Name = "textBoxResultat";
             this.textBoxResultat.ReadOnly = true;
-            this.textBoxResultat.Size = new System.Drawing.Size(407, 29);
+            this.textBoxResultat.Size = new System.Drawing.Size(407, 34);
             this.textBoxResultat.TabIndex = 1;
             // 
             // groupBox1
@@ -117,9 +117,9 @@
             this.groupBox1.Controls.Add(this.radioButtonRemplacerAll1Par2);
             this.groupBox1.Controls.Add(this.radioButtonNbOccurence1);
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(31, 358);
+            this.groupBox1.Location = new System.Drawing.Point(31, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(627, 185);
+            this.groupBox1.Size = new System.Drawing.Size(627, 178);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Faites votre choix";
@@ -127,10 +127,10 @@
             // radioButtonRemplacerLast1Par2
             // 
             this.radioButtonRemplacerLast1Par2.AutoSize = true;
-            this.radioButtonRemplacerLast1Par2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonRemplacerLast1Par2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButtonRemplacerLast1Par2.Location = new System.Drawing.Point(6, 132);
             this.radioButtonRemplacerLast1Par2.Name = "radioButtonRemplacerLast1Par2";
-            this.radioButtonRemplacerLast1Par2.Size = new System.Drawing.Size(337, 25);
+            this.radioButtonRemplacerLast1Par2.Size = new System.Drawing.Size(370, 29);
             this.radioButtonRemplacerLast1Par2.TabIndex = 8;
             this.radioButtonRemplacerLast1Par2.Text = "Remplacer dernière occurence de 1 par 2";
             this.radioButtonRemplacerLast1Par2.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@
             // radioButtonRemplacer1ErPar2
             // 
             this.radioButtonRemplacer1ErPar2.AutoSize = true;
-            this.radioButtonRemplacer1ErPar2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonRemplacer1ErPar2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButtonRemplacer1ErPar2.Location = new System.Drawing.Point(6, 101);
             this.radioButtonRemplacer1ErPar2.Name = "radioButtonRemplacer1ErPar2";
-            this.radioButtonRemplacer1ErPar2.Size = new System.Drawing.Size(283, 25);
+            this.radioButtonRemplacer1ErPar2.Size = new System.Drawing.Size(307, 29);
             this.radioButtonRemplacer1ErPar2.TabIndex = 7;
             this.radioButtonRemplacer1ErPar2.TabStop = true;
             this.radioButtonRemplacer1ErPar2.Text = "Remplacer 1ère occurence 1 par 2";
@@ -150,10 +150,10 @@
             // radioButtonRemplacerAll1Par2
             // 
             this.radioButtonRemplacerAll1Par2.AutoSize = true;
-            this.radioButtonRemplacerAll1Par2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonRemplacerAll1Par2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButtonRemplacerAll1Par2.Location = new System.Drawing.Point(7, 70);
             this.radioButtonRemplacerAll1Par2.Name = "radioButtonRemplacerAll1Par2";
-            this.radioButtonRemplacerAll1Par2.Size = new System.Drawing.Size(353, 25);
+            this.radioButtonRemplacerAll1Par2.Size = new System.Drawing.Size(389, 29);
             this.radioButtonRemplacerAll1Par2.TabIndex = 6;
             this.radioButtonRemplacerAll1Par2.TabStop = true;
             this.radioButtonRemplacerAll1Par2.Text = "Remplacer toutes les occurences de 1 par 2";
@@ -162,10 +162,10 @@
             // radioButtonNbOccurence1
             // 
             this.radioButtonNbOccurence1.AutoSize = true;
-            this.radioButtonNbOccurence1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioButtonNbOccurence1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButtonNbOccurence1.Location = new System.Drawing.Point(7, 39);
             this.radioButtonNbOccurence1.Name = "radioButtonNbOccurence1";
-            this.radioButtonNbOccurence1.Size = new System.Drawing.Size(186, 25);
+            this.radioButtonNbOccurence1.Size = new System.Drawing.Size(203, 29);
             this.radioButtonNbOccurence1.TabIndex = 5;
             this.radioButtonNbOccurence1.TabStop = true;
             this.radioButtonNbOccurence1.Text = "Nombre occurence 1";
@@ -173,20 +173,21 @@
             // 
             // buttonGame
             // 
-            this.buttonGame.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonGame.Location = new System.Drawing.Point(31, 577);
+            this.buttonGame.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonGame.Location = new System.Drawing.Point(38, 430);
             this.buttonGame.Name = "buttonGame";
             this.buttonGame.Size = new System.Drawing.Size(124, 33);
             this.buttonGame.TabIndex = 9;
             this.buttonGame.Text = "Jouer";
+            this.buttonGame.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGame.UseVisualStyleBackColor = true;
             this.buttonGame.Click += new System.EventHandler(this.EventButtonGame);
             // 
             // FormRadioButtonNbOccurence1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 622);
+            this.ClientSize = new System.Drawing.Size(700, 491);
             this.Controls.Add(this.buttonGame);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxResultat);

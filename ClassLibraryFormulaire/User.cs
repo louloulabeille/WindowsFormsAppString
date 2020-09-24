@@ -30,7 +30,7 @@ namespace ClassLibraryFormulaire
         }
         #endregion
 
-        #region accesseur
+        #region assesseur
         public string IdUser { 
             get => _idUser;
             set

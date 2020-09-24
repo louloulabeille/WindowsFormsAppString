@@ -42,6 +42,8 @@ namespace WindowsFormsAppString
         {
             User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
             User moi = new User("Afpa2020", "loulou", "azerty2020");
+            //this.ParentForm.Text = $"Bienvenue {moi.UserName}";
+
             if (moi.IsVerifIdMp(utilisateur))
             {
                 textBoxIdUtilisateur.CausesValidation = false;

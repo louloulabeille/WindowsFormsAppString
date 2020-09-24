@@ -12,12 +12,12 @@ namespace WindowsFormsAppString
 {
     public partial class MDIPrincipal : Form
     {
-        private int childFormNumber = 0;
+        //private int childFormNumber = 0;
         
         public MDIPrincipal()
         {
             InitializeComponent();
-            
+            Debug.WriteLine("loulou");
         }
 
         private void EventOpenFormChar(object sender, EventArgs e)
@@ -39,13 +39,8 @@ namespace WindowsFormsAppString
             // event qui se passe lors du chargement du formulaire pour demander
             // le compte et le mot de passe
             FormUserControl fUC = new FormUserControl();
-            // affection des propriétés au bouton buttonConnect de AcceptButton -> Entrer
-            // et au buttonLeave la propriété CancelButton -> Echap
-            //fUC.AcceptButton = fUC.Controls.Find("buttonConnect", false)[0] as Button;
-            //fUC.CancelButton = fUC.Controls.Find("buttonLeave",false)[0] as Button;
-
             DialogResult result = fUC.ShowDialog();
-
+            
             switch ( result )
             {
                 case DialogResult.OK:
