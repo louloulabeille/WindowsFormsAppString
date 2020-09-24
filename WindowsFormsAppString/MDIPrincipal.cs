@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClassLibraryFormulaire;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -113,7 +115,23 @@ namespace WindowsFormsAppString
             // event qui se passe lors du chargement du formulaire pour demander
             // le compte et le mot de passe
             FormUserControl fUC = new FormUserControl();
-            fUC.ShowDialog();
+            // affection des propriétés au bouton buttonConnect de AcceptButton -> Entrer
+            // et au buttonLeave la propriété CancelButton -> Echap
+            //fUC.AcceptButton = fUC.Controls.Find("buttonConnect", false)[0] as Button;
+            //fUC.CancelButton = fUC.Controls.Find("buttonLeave",false)[0] as Button;
+
+            DialogResult result = fUC.ShowDialog();
+
+            switch ( result )
+            {
+                case DialogResult.OK:
+                    Debug.WriteLine("C'est ok");
+                    break;
+                case DialogResult.Cancel:
+                    Debug.WriteLine("coucou je sort");
+                    break;
+            }
+
         }
     }
 }

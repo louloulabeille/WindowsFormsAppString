@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxMp = new System.Windows.Forms.TextBox();
             this.textBoxIdUtilisateur = new System.Windows.Forms.TextBox();
+            this.textBoxMp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonLeave = new System.Windows.Forms.Button();
+            this.buttonTest = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxMp);
             this.groupBox1.Controls.Add(this.textBoxIdUtilisateur);
+            this.groupBox1.Controls.Add(this.textBoxMp);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -53,21 +54,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paramètres d\'authentification";
             // 
-            // textBoxMp
-            // 
-            this.textBoxMp.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxMp.Location = new System.Drawing.Point(114, 77);
-            this.textBoxMp.Name = "textBoxMp";
-            this.textBoxMp.Size = new System.Drawing.Size(262, 27);
-            this.textBoxMp.TabIndex = 1;
-            // 
             // textBoxIdUtilisateur
             // 
-            this.textBoxIdUtilisateur.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxIdUtilisateur.Location = new System.Drawing.Point(115, 40);
+            this.textBoxIdUtilisateur.Location = new System.Drawing.Point(118, 39);
             this.textBoxIdUtilisateur.Name = "textBoxIdUtilisateur";
             this.textBoxIdUtilisateur.Size = new System.Drawing.Size(262, 27);
             this.textBoxIdUtilisateur.TabIndex = 0;
+            this.textBoxIdUtilisateur.Text = " ";
+            this.textBoxIdUtilisateur.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxIdUtilisateur_Validating);
+            this.textBoxIdUtilisateur.Validated += new System.EventHandler(this.textBoxIdUtilisateur_Validated);
+            // 
+            // textBoxMp
+            // 
+            this.textBoxMp.Location = new System.Drawing.Point(118, 76);
+            this.textBoxMp.Name = "textBoxMp";
+            this.textBoxMp.PasswordChar = '*';
+            this.textBoxMp.Size = new System.Drawing.Size(262, 27);
+            this.textBoxMp.TabIndex = 1;
+            this.textBoxMp.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMp_Validating);
+            this.textBoxMp.Validated += new System.EventHandler(this.textBoxMp_Validated);
             // 
             // label2
             // 
@@ -93,15 +98,19 @@
             // 
             // buttonConnect
             // 
+            this.buttonConnect.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonConnect.Location = new System.Drawing.Point(91, 201);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(143, 33);
             this.buttonConnect.TabIndex = 2;
             this.buttonConnect.Text = "Se connecter";
             this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.EventSeConnecter);
             // 
             // buttonLeave
             // 
+            this.buttonLeave.CausesValidation = false;
+            this.buttonLeave.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonLeave.Location = new System.Drawing.Point(303, 201);
             this.buttonLeave.Name = "buttonLeave";
             this.buttonLeave.Size = new System.Drawing.Size(143, 33);
@@ -109,16 +118,31 @@
             this.buttonLeave.Text = "Quitter";
             this.buttonLeave.UseVisualStyleBackColor = true;
             // 
+            // buttonTest
+            // 
+            this.buttonTest.CausesValidation = false;
+            this.buttonTest.Location = new System.Drawing.Point(480, 206);
+            this.buttonTest.Name = "buttonTest";
+            this.buttonTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest.TabIndex = 4;
+            this.buttonTest.Text = "Test";
+            this.buttonTest.UseVisualStyleBackColor = true;
+            this.buttonTest.Click += new System.EventHandler(this.EventTest);
+            // 
             // FormUserControl
             // 
+            this.AcceptButton = this.buttonConnect;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonLeave;
             this.ClientSize = new System.Drawing.Size(567, 268);
+            this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.buttonLeave);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FormUserControl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Identifier-vous";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -129,11 +153,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxMp;
-        private System.Windows.Forms.TextBox textBoxIdUtilisateur;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.Button buttonLeave;
+        private System.Windows.Forms.TextBox textBoxMp;
+        private System.Windows.Forms.TextBox textBoxIdUtilisateur;
+        private System.Windows.Forms.Button buttonTest;
     }
 }

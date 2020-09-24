@@ -38,49 +38,35 @@ namespace WindowsFormsAppString
             if (this.textBoxSaisieString.Text.Length > 0)
             {
                 // Event du bouton clic pour retrouner la catégorie du caractère
-                Array tabCart = this.textBoxSaisieString.Text.ToArray();
+                char[] tabCart = this.textBoxSaisieString.Text.ToArray();
                 int i = (int)this.numericUpDownNumCaract.Value - 1;
-
-                if (Char.IsDigit((char)tabCart.GetValue(i)))
-                {
-                    this.textBoxResultCaract.Text = "chiffre";
-                    return;
-                }
-                else
-                {
-                    this.textBoxResultCaract.Text = "Sais Pas";
-                }
-
-                if (Char.IsLetter((char)tabCart.GetValue(i)))
-                {
-                    this.textBoxResultCaract.Text = "lettre";
-                    return;
-                }
-                else
-                {
-                    this.textBoxResultCaract.Text = "Sais Pas";
-                }
-
-                if (Char.IsPunctuation((char)tabCart.GetValue(i)))
-                {
-                    this.textBoxResultCaract.Text = "ponctuation";
-                    return;
-                }
-                else
-                {
-                    this.textBoxResultCaract.Text = "Sais Pas";
-                }
-
-                if (char.IsSymbol((char)tabCart.GetValue(i)))
-                {
-                    this.textBoxResultCaract.Text = "symbole";
-                    return;
-                }
-                else
-                {
-                    this.textBoxResultCaract.Text = "Sais Pas";
-                }
+                textBoxResultCaract.Text = IsVerifChar(tabCart[i]);
             }
+        }
+
+        private string IsVerifChar( char caract )
+        {
+            if (Char.IsDigit(caract))
+            {
+                return "chiffre";
+            }
+            
+            if (Char.IsLetter(caract))
+            {
+                return "lettre";
+            }
+
+            if (Char.IsPunctuation(caract))
+            {
+                return "ponctuation";
+            }
+
+            if (char.IsSymbol(caract))
+            {
+                return "symbole";
+            }
+            
+            return "Sais Pas";
             
         }
     }
