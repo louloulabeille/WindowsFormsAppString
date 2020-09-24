@@ -73,35 +73,36 @@
             // menuStripExerciceCharString
             // 
             this.menuStripExerciceCharString.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStripExerciceCharString.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripExerciceCharString.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemChar,
             this.toolStripMenuItemString,
             this.toolStripMenuItemDialogModal});
             this.menuStripExerciceCharString.Location = new System.Drawing.Point(0, 0);
             this.menuStripExerciceCharString.Name = "menuStripExerciceCharString";
-            this.menuStripExerciceCharString.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStripExerciceCharString.Size = new System.Drawing.Size(737, 24);
+            this.menuStripExerciceCharString.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStripExerciceCharString.Size = new System.Drawing.Size(1054, 30);
             this.menuStripExerciceCharString.TabIndex = 0;
             this.menuStripExerciceCharString.Text = "Chaine de caractère";
             // 
             // toolStripMenuItemChar
             // 
             this.toolStripMenuItemChar.Name = "toolStripMenuItemChar";
-            this.toolStripMenuItemChar.Size = new System.Drawing.Size(69, 20);
+            this.toolStripMenuItemChar.Size = new System.Drawing.Size(86, 24);
             this.toolStripMenuItemChar.Text = "Caractère";
             this.toolStripMenuItemChar.Click += new System.EventHandler(this.EventOpenFormChar);
             // 
             // toolStripMenuItemString
             // 
             this.toolStripMenuItemString.Name = "toolStripMenuItemString";
-            this.toolStripMenuItemString.Size = new System.Drawing.Size(123, 20);
+            this.toolStripMenuItemString.Size = new System.Drawing.Size(154, 24);
             this.toolStripMenuItemString.Text = "Chaîne de caractère";
             this.toolStripMenuItemString.Click += new System.EventHandler(this.EventOpenFormString);
             // 
             // toolStripMenuItemDialogModal
             // 
             this.toolStripMenuItemDialogModal.Name = "toolStripMenuItemDialogModal";
-            this.toolStripMenuItemDialogModal.Size = new System.Drawing.Size(77, 20);
+            this.toolStripMenuItemDialogModal.Size = new System.Drawing.Size(96, 24);
             this.toolStripMenuItemDialogModal.Text = "Test Modal";
             this.toolStripMenuItemDialogModal.Click += new System.EventHandler(this.EventMotDePasse);
             // 
@@ -113,19 +114,20 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 501);
+            this.statusStrip.Location = new System.Drawing.Point(0, 671);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip.Size = new System.Drawing.Size(737, 22);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1054, 26);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(27, 17);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(35, 20);
             this.toolStripStatusLabel.Text = "État";
             // 
             // helpToolStripMenuItem
@@ -315,16 +317,17 @@
             // 
             // MDIPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 523);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1054, 697);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStripExerciceCharString);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripExerciceCharString;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "MDIPrincipal";
-            this.Text = "MDIParent1";
+            this.Text = "Bienvenue";
             this.Load += new System.EventHandler(this.EventMotDePasse);
             this.menuStripExerciceCharString.ResumeLayout(false);
             this.menuStripExerciceCharString.PerformLayout();

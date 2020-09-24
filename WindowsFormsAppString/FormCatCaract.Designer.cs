@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(55, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 21);
+            this.label1.Size = new System.Drawing.Size(193, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Saisissez une chaine :";
             // 
@@ -52,7 +52,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 21);
+            this.label2.Size = new System.Drawing.Size(203, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Position du caractère :";
             // 
@@ -61,7 +61,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(55, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(90, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "Résultat :";
             // 
@@ -69,7 +69,7 @@
             // 
             this.textBoxSaisieString.Location = new System.Drawing.Point(278, 77);
             this.textBoxSaisieString.Name = "textBoxSaisieString";
-            this.textBoxSaisieString.Size = new System.Drawing.Size(476, 29);
+            this.textBoxSaisieString.Size = new System.Drawing.Size(476, 34);
             this.textBoxSaisieString.TabIndex = 1;
             this.textBoxSaisieString.TextChanged += new System.EventHandler(this.EventMiseAJourNumericUpDown);
             // 
@@ -77,7 +77,7 @@
             // 
             this.numericUpDownNumCaract.Location = new System.Drawing.Point(278, 132);
             this.numericUpDownNumCaract.Name = "numericUpDownNumCaract";
-            this.numericUpDownNumCaract.Size = new System.Drawing.Size(120, 29);
+            this.numericUpDownNumCaract.Size = new System.Drawing.Size(120, 34);
             this.numericUpDownNumCaract.TabIndex = 2;
             // 
             // textBoxResultCaract
@@ -85,7 +85,7 @@
             this.textBoxResultCaract.Location = new System.Drawing.Point(278, 233);
             this.textBoxResultCaract.Name = "textBoxResultCaract";
             this.textBoxResultCaract.ReadOnly = true;
-            this.textBoxResultCaract.Size = new System.Drawing.Size(476, 29);
+            this.textBoxResultCaract.Size = new System.Drawing.Size(476, 34);
             this.textBoxResultCaract.TabIndex = 3;
             // 
             // buttonCaractCategorie
@@ -100,9 +100,9 @@
             // 
             // FormCatCaract
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 484);
+            this.ClientSize = new System.Drawing.Size(784, 432);
             this.Controls.Add(this.buttonCaractCategorie);
             this.Controls.Add(this.textBoxResultCaract);
             this.Controls.Add(this.numericUpDownNumCaract);

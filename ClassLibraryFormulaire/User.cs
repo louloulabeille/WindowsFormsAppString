@@ -72,7 +72,7 @@ namespace ClassLibraryFormulaire
 
         /// <summary>
         /// méthode de vérification de Identifant 
-        /// il doit être @"^[a-bA-Z]{1}[a-zA-Z0-9]{n,}"
+        /// il doit être @"^[A-Za-z]{1}\w{5,}"
         /// </summary>
         /// <param name="value">identifant de l'utilisateur</param>
         /// <returns></returns>

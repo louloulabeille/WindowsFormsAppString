@@ -41,7 +41,7 @@ namespace WindowsFormsAppString
         private void EventSeConnecter(object sender, EventArgs e)
         {
             User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
-            User moi = new User("Pap45oune", "loulou", "cou12cou");
+            User moi = new User("Afpa2020", "loulou", "azerty2020");
             if (moi.IsVerifIdMp(utilisateur))
             {
                 textBoxIdUtilisateur.CausesValidation = false;
