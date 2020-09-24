@@ -107,5 +107,13 @@ namespace WindowsFormsAppString
             frbnO.MdiParent = this;
             frbnO.Show();
         }
+
+        private void EventMotDePasse(object sender, EventArgs e)
+        {
+            // event qui se passe lors du chargement du formulaire pour demander
+            // le compte et le mot de passe
+            FormUserControl fUC = new FormUserControl();
+            fUC.ShowDialog();
+        }
     }
 }

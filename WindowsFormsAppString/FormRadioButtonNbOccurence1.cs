@@ -35,7 +35,6 @@ namespace WindowsFormsAppString
                                 int index = 0;
                                 while (textBoxSaisieString.Text.IndexOf(textBoxString1.Text, index) > -1)
                                 {
-
                                     index = textBoxSaisieString.Text.IndexOf(textBoxString1.Text, index) + 1;
                                     i++;
                                 }

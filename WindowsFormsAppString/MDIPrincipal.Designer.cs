@@ -32,6 +32,7 @@
             this.menuStripExerciceCharString = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemChar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemString = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemDialogModal = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBoxChar = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -74,7 +75,8 @@
             this.menuStripExerciceCharString.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStripExerciceCharString.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemChar,
-            this.toolStripMenuItemString});
+            this.toolStripMenuItemString,
+            this.toolStripMenuItemDialogModal});
             this.menuStripExerciceCharString.Location = new System.Drawing.Point(0, 0);
             this.menuStripExerciceCharString.Name = "menuStripExerciceCharString";
             this.menuStripExerciceCharString.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -95,6 +97,13 @@
             this.toolStripMenuItemString.Size = new System.Drawing.Size(123, 20);
             this.toolStripMenuItemString.Text = "Chaîne de caractère";
             this.toolStripMenuItemString.Click += new System.EventHandler(this.EventOpenFormString);
+            // 
+            // toolStripMenuItemDialogModal
+            // 
+            this.toolStripMenuItemDialogModal.Name = "toolStripMenuItemDialogModal";
+            this.toolStripMenuItemDialogModal.Size = new System.Drawing.Size(77, 20);
+            this.toolStripMenuItemDialogModal.Text = "Test Modal";
+            this.toolStripMenuItemDialogModal.Click += new System.EventHandler(this.EventMotDePasse);
             // 
             // toolStripTextBoxChar
             // 
@@ -316,6 +325,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MDIPrincipal";
             this.Text = "MDIParent1";
+            this.Load += new System.EventHandler(this.EventMotDePasse);
             this.menuStripExerciceCharString.ResumeLayout(false);
             this.menuStripExerciceCharString.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -363,6 +373,7 @@
         private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDialogModal;
     }
 }
 
