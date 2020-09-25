@@ -76,7 +76,7 @@ namespace WindowsFormsAppString
 
         private void EventHaut(object sender, EventArgs e)
         {
-            if (ListBoxCible.SelectedIndex > -1)
+            if (ListBoxCible.SelectedIndex > -1 && ListBoxCible.Items.Count > 0)
             {
                 int index = ListBoxCible.SelectedIndex;
                 object o = ListBoxCible.SelectedItem;
@@ -88,7 +88,7 @@ namespace WindowsFormsAppString
 
         private void EventBas(object sender, EventArgs e)
         {
-            if (ListBoxCible.SelectedIndex > -1)
+            if (ListBoxCible.SelectedIndex > -1 && ListBoxCible.Items.Count > 0)
             {
                 int index = ListBoxCible.SelectedIndex;
                 object o = ListBoxCible.SelectedItem;
