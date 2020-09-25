@@ -28,84 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelError = new System.Windows.Forms.Label();
-            this.textBoxIdUtilisateur = new System.Windows.Forms.TextBox();
-            this.textBoxMp = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonLeave = new System.Windows.Forms.Button();
             this.buttonTest = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxMp = new System.Windows.Forms.TextBox();
+            this.textBoxIdUtilisateur = new System.Windows.Forms.TextBox();
+            this.labelError = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.labelError);
-            this.groupBox1.Controls.Add(this.textBoxIdUtilisateur);
-            this.groupBox1.Controls.Add(this.textBoxMp);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(55, 39);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(463, 140);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Paramètres d\'authentification";
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(9, 111);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(0, 20);
-            this.labelError.TabIndex = 2;
-            this.labelError.Visible = false;
-            // 
-            // textBoxIdUtilisateur
-            // 
-            this.textBoxIdUtilisateur.Location = new System.Drawing.Point(131, 39);
-            this.textBoxIdUtilisateur.Name = "textBoxIdUtilisateur";
-            this.textBoxIdUtilisateur.Size = new System.Drawing.Size(262, 27);
-            this.textBoxIdUtilisateur.TabIndex = 0;
-            this.textBoxIdUtilisateur.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxIdUtilisateur_Validating);
-            this.textBoxIdUtilisateur.Validated += new System.EventHandler(this.textBoxIdUtilisateur_Validated);
-            // 
-            // textBoxMp
-            // 
-            this.textBoxMp.Location = new System.Drawing.Point(131, 78);
-            this.textBoxMp.Name = "textBoxMp";
-            this.textBoxMp.PasswordChar = '*';
-            this.textBoxMp.Size = new System.Drawing.Size(262, 27);
-            this.textBoxMp.TabIndex = 1;
-            this.textBoxMp.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMp_Validating);
-            this.textBoxMp.Validated += new System.EventHandler(this.textBoxMp_Validated);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(7, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mot de passe :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(9, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID utilisateur :";
             // 
             // buttonConnect
             // 
@@ -140,6 +78,81 @@
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.EventTest);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label1.Location = new System.Drawing.Point(9, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID utilisateur :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Location = new System.Drawing.Point(7, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mot de passe :";
+            // 
+            // textBoxMp
+            // 
+            this.textBoxMp.Location = new System.Drawing.Point(131, 78);
+            this.textBoxMp.Name = "textBoxMp";
+            this.textBoxMp.PasswordChar = '*';
+            this.textBoxMp.Size = new System.Drawing.Size(262, 27);
+            this.textBoxMp.TabIndex = 1;
+            this.textBoxMp.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxMp_Validating);
+            this.textBoxMp.Validated += new System.EventHandler(this.textBoxMp_Validated);
+            // 
+            // textBoxIdUtilisateur
+            // 
+            this.textBoxIdUtilisateur.Location = new System.Drawing.Point(131, 39);
+            this.textBoxIdUtilisateur.Name = "textBoxIdUtilisateur";
+            this.textBoxIdUtilisateur.Size = new System.Drawing.Size(262, 27);
+            this.textBoxIdUtilisateur.TabIndex = 0;
+            this.textBoxIdUtilisateur.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxIdUtilisateur_Validating);
+            this.textBoxIdUtilisateur.Validated += new System.EventHandler(this.textBoxIdUtilisateur_Validated);
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(9, 111);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 20);
+            this.labelError.TabIndex = 2;
+            this.labelError.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelError);
+            this.groupBox1.Controls.Add(this.textBoxIdUtilisateur);
+            this.groupBox1.Controls.Add(this.textBoxMp);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox1.Location = new System.Drawing.Point(55, 39);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(463, 140);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Paramètres d\'authentification";
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
             // FormUserControl
             // 
             this.AcceptButton = this.buttonConnect;
@@ -155,22 +168,25 @@
             this.Name = "FormUserControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Identifier-vous";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.Button buttonLeave;
-        private System.Windows.Forms.TextBox textBoxMp;
-        private System.Windows.Forms.TextBox textBoxIdUtilisateur;
         private System.Windows.Forms.Button buttonTest;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.TextBox textBoxIdUtilisateur;
+        private System.Windows.Forms.TextBox textBoxMp;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
     }
 }

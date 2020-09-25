@@ -29,16 +29,14 @@ namespace WindowsFormsAppString
         /// <param name="e"></param>
         private void textBoxIdUtilisateur_Validating(object sender, CancelEventArgs e)
         {
+            errorProvider1.SetError(textBoxIdUtilisateur, String.Empty);
             if (!User.IsVerifId(textBoxIdUtilisateur.Text))
             {
                 e.Cancel = true;
-                labelError.Text = "Erreur sur la saisie de l'identifiant";
-                labelError.Visible = true;
+                errorProvider1.SetError(textBoxIdUtilisateur, "La saisie de l'identifiant doit avoir plus de 5 caractères et commencer par une lettre.");
             }else
             {
                 e.Cancel = false;
-                labelError.Text = "";
-                labelError.Visible = false;
             }
         }
 
@@ -55,16 +53,15 @@ namespace WindowsFormsAppString
         /// <param name="e"></param>
         private void textBoxMp_Validating(object sender, CancelEventArgs e)
         {
+            errorProvider3.SetError(textBoxMp, string.Empty);
             if (!User.IsVerifMp(textBoxMp.Text))
             {
                 e.Cancel = true;
-                labelError.Text = "Erreur sur la saisie du mot de passe";
-                labelError.Visible = true;
+                errorProvider3.SetError(textBoxMp, "La saisie du Mot de passe doit avoir au minimun 5 caractères.");
+
             }else
             {
                 e.Cancel = false;
-                labelError.Text = "";
-                labelError.Visible = false;
             }
         }
 
@@ -85,24 +82,30 @@ namespace WindowsFormsAppString
             try
             {
                 User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
-                User moi = new User("Afpa2020", "loulou", "azerty2020");
+                User moi = new User("Afpa!2020", "loulou", "azerty2020");
+
+                errorProvider1.SetError(textBoxIdUtilisateur, string.Empty);
+                errorProvider3.SetError(textBoxMp, string.Empty);
+                labelError.Visible = false;
 
                 if (moi.IsVerifIdMp(utilisateur))
                 {
-                    textBoxIdUtilisateur.CausesValidation = false;
+                    //textBoxIdUtilisateur.CausesValidation = false;
                     this.DialogResult = DialogResult.OK;
                 }
                 else
                 {
                     textBoxIdUtilisateur.CausesValidation = true;
-                    labelError.Text = "la validation de l'identifant ou du mot de passe est incorrecte.!";
-                    labelError.Visible = true;
+                    textBoxMp.CausesValidation = true;
+                    errorProvider1.SetError(textBoxIdUtilisateur,"Impossible de vous identifer.");
+                    errorProvider3.SetError(textBoxMp, "Erreur sur l'idenfiant ou le mot de passe.");
                     textBoxIdUtilisateur.Focus();
                     this.DialogResult = DialogResult.None;
                 }
             } 
             catch(ApplicationException aE)
             {
+
                 labelError.Text = (aE.Message);
                 labelError.Visible = true;
             }
