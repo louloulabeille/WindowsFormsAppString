@@ -33,6 +33,7 @@
             this.toolStripMenuItemChar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemString = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemDialogModal = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemListe = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBoxChar = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -77,34 +78,42 @@
             this.menuStripExerciceCharString.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemChar,
             this.toolStripMenuItemString,
-            this.toolStripMenuItemDialogModal});
+            this.toolStripMenuItemDialogModal,
+            this.toolStripMenuItemListe});
             this.menuStripExerciceCharString.Location = new System.Drawing.Point(0, 0);
             this.menuStripExerciceCharString.Name = "menuStripExerciceCharString";
-            this.menuStripExerciceCharString.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStripExerciceCharString.Size = new System.Drawing.Size(1054, 30);
+            this.menuStripExerciceCharString.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStripExerciceCharString.Size = new System.Drawing.Size(1184, 24);
             this.menuStripExerciceCharString.TabIndex = 0;
             this.menuStripExerciceCharString.Text = "Chaine de caractère";
             // 
             // toolStripMenuItemChar
             // 
             this.toolStripMenuItemChar.Name = "toolStripMenuItemChar";
-            this.toolStripMenuItemChar.Size = new System.Drawing.Size(86, 24);
+            this.toolStripMenuItemChar.Size = new System.Drawing.Size(69, 20);
             this.toolStripMenuItemChar.Text = "Caractère";
             this.toolStripMenuItemChar.Click += new System.EventHandler(this.EventOpenFormChar);
             // 
             // toolStripMenuItemString
             // 
             this.toolStripMenuItemString.Name = "toolStripMenuItemString";
-            this.toolStripMenuItemString.Size = new System.Drawing.Size(154, 24);
+            this.toolStripMenuItemString.Size = new System.Drawing.Size(123, 20);
             this.toolStripMenuItemString.Text = "Chaîne de caractère";
             this.toolStripMenuItemString.Click += new System.EventHandler(this.EventOpenFormString);
             // 
             // toolStripMenuItemDialogModal
             // 
             this.toolStripMenuItemDialogModal.Name = "toolStripMenuItemDialogModal";
-            this.toolStripMenuItemDialogModal.Size = new System.Drawing.Size(96, 24);
+            this.toolStripMenuItemDialogModal.Size = new System.Drawing.Size(77, 20);
             this.toolStripMenuItemDialogModal.Text = "Test Modal";
             this.toolStripMenuItemDialogModal.Click += new System.EventHandler(this.EventMotDePasse);
+            // 
+            // toolStripMenuItemListe
+            // 
+            this.toolStripMenuItemListe.Name = "toolStripMenuItemListe";
+            this.toolStripMenuItemListe.Size = new System.Drawing.Size(112, 20);
+            this.toolStripMenuItemListe.Text = "Gestion des Listes";
+            this.toolStripMenuItemListe.Click += new System.EventHandler(this.EventOpenListe);
             // 
             // toolStripTextBoxChar
             // 
@@ -117,17 +126,17 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 671);
+            this.statusStrip.Location = new System.Drawing.Point(0, 689);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 18, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1054, 26);
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1184, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(35, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(27, 17);
             this.toolStripStatusLabel.Text = "État";
             // 
             // helpToolStripMenuItem
@@ -317,15 +326,15 @@
             // 
             // MDIPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1054, 697);
+            this.ClientSize = new System.Drawing.Size(1184, 711);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStripExerciceCharString);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripExerciceCharString;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MDIPrincipal";
             this.Text = "Bienvenue";
             this.Load += new System.EventHandler(this.EventMotDePasse);
@@ -377,6 +386,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemDialogModal;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemListe;
     }
 }
 

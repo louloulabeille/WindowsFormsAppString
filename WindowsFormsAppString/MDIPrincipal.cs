@@ -19,6 +19,7 @@ namespace WindowsFormsAppString
             InitializeComponent();
         }
 
+        #region Event ouverture des formulaires dans le Mdi
         private void EventOpenFormChar(object sender, EventArgs e)
         {
             FormCatCaract fCC = new FormCatCaract();
@@ -33,9 +34,15 @@ namespace WindowsFormsAppString
             frbnO.Show();
         }
 
+        private void EventOpenListe(object sender, EventArgs e)
+        {
+            FormListe fL = new FormListe();
+            fL.MdiParent = this;
+            fL.Show();
+        }
+
         private void EventMotDePasse(object sender, EventArgs e)
         {
-            // event qui se passe lors du chargement du formulaire pour demander
             // le compte et le mot de passe
             FormUserControl fUC = new FormUserControl();
             DialogResult result = fUC.ShowDialog();
@@ -46,10 +53,12 @@ namespace WindowsFormsAppString
                     Debug.WriteLine("C'est ok");
                     break;
                 case DialogResult.Cancel:
-                    Debug.WriteLine("coucou je sort");
+                    Debug.WriteLine("Coucou je sort");
                     break;
             }
 
         }
+        #endregion
+
     }
 }

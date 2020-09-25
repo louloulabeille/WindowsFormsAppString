@@ -29,7 +29,17 @@ namespace WindowsFormsAppString
         /// <param name="e"></param>
         private void textBoxIdUtilisateur_Validating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !User.IsVerifId(textBoxIdUtilisateur.Text);
+            if (!User.IsVerifId(textBoxIdUtilisateur.Text))
+            {
+                e.Cancel = true;
+                labelError.Text = "Erreur sur la saisie de l'identifiant";
+                labelError.Visible = true;
+            }else
+            {
+                e.Cancel = false;
+                labelError.Text = "";
+                labelError.Visible = false;
+            }
         }
 
         private void textBoxIdUtilisateur_Validated(object sender, EventArgs e)
@@ -45,7 +55,17 @@ namespace WindowsFormsAppString
         /// <param name="e"></param>
         private void textBoxMp_Validating(object sender, CancelEventArgs e)
         {
-            e.Cancel = !User.IsVerifMp(textBoxMp.Text);
+            if (!User.IsVerifMp(textBoxMp.Text))
+            {
+                e.Cancel = true;
+                labelError.Text = "Erreur sur la saisie du mot de passe";
+                labelError.Visible = true;
+            }else
+            {
+                e.Cancel = false;
+                labelError.Text = "";
+                labelError.Visible = false;
+            }
         }
 
         private void textBoxMp_Validated(object sender, EventArgs e)
@@ -62,19 +82,31 @@ namespace WindowsFormsAppString
         /// <param name="e"></param>
         private void EventSeConnecter(object sender, EventArgs e)
         {
-            User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
-            User moi = new User("Afpa2020", "loulou", "azerty2020");
+            try
+            {
+                User utilisateur = new User(textBoxIdUtilisateur.Text, textBoxMp.Text);
+                User moi = new User("Afpa2020", "loulou", "azerty2020");
 
-            if (moi.IsVerifIdMp(utilisateur))
+                if (moi.IsVerifIdMp(utilisateur))
+                {
+                    textBoxIdUtilisateur.CausesValidation = false;
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    textBoxIdUtilisateur.CausesValidation = true;
+                    labelError.Text = "la validation de l'identifant ou du mot de passe est incorrecte.!";
+                    labelError.Visible = true;
+                    textBoxIdUtilisateur.Focus();
+                    this.DialogResult = DialogResult.None;
+                }
+            } 
+            catch(ApplicationException aE)
             {
-                textBoxIdUtilisateur.CausesValidation = false;
-                this.DialogResult = DialogResult.OK;
+                labelError.Text = (aE.Message);
+                labelError.Visible = true;
             }
-            else
-            {
-                textBoxIdUtilisateur.CausesValidation = true;
-                this.DialogResult = DialogResult.None;
-            }
+            
 
         }
         #endregion
