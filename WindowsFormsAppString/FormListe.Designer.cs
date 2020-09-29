@@ -48,20 +48,18 @@ namespace WindowsFormsAppString
             // ListBoxCible
             // 
             this.ListBoxCible.FormattingEnabled = true;
-            this.ListBoxCible.ItemHeight = 20;
-            this.ListBoxCible.Location = new System.Drawing.Point(521, 92);
-            this.ListBoxCible.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ListBoxCible.ItemHeight = 15;
+            this.ListBoxCible.Location = new System.Drawing.Point(456, 69);
             this.ListBoxCible.Name = "ListBoxCible";
-            this.ListBoxCible.Size = new System.Drawing.Size(257, 124);
+            this.ListBoxCible.Size = new System.Drawing.Size(225, 94);
             this.ListBoxCible.TabIndex = 0;
             // 
             // ComboBoxSource
             // 
             this.ComboBoxSource.FormattingEnabled = true;
-            this.ComboBoxSource.Location = new System.Drawing.Point(14, 92);
-            this.ComboBoxSource.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ComboBoxSource.Location = new System.Drawing.Point(12, 69);
             this.ComboBoxSource.Name = "ComboBoxSource";
-            this.ComboBoxSource.Size = new System.Drawing.Size(212, 28);
+            this.ComboBoxSource.Size = new System.Drawing.Size(186, 23);
             this.ComboBoxSource.TabIndex = 1;
             // 
             // errorProvider1
@@ -70,10 +68,9 @@ namespace WindowsFormsAppString
             // 
             // buttonComboList
             // 
-            this.buttonComboList.Location = new System.Drawing.Point(350, 91);
-            this.buttonComboList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonComboList.Location = new System.Drawing.Point(306, 68);
             this.buttonComboList.Name = "buttonComboList";
-            this.buttonComboList.Size = new System.Drawing.Size(86, 31);
+            this.buttonComboList.Size = new System.Drawing.Size(75, 23);
             this.buttonComboList.TabIndex = 2;
             this.buttonComboList.Text = ">";
             this.buttonComboList.UseVisualStyleBackColor = true;
@@ -81,10 +78,9 @@ namespace WindowsFormsAppString
             // 
             // buttonComboListAll
             // 
-            this.buttonComboListAll.Location = new System.Drawing.Point(350, 139);
-            this.buttonComboListAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonComboListAll.Location = new System.Drawing.Point(306, 104);
             this.buttonComboListAll.Name = "buttonComboListAll";
-            this.buttonComboListAll.Size = new System.Drawing.Size(86, 31);
+            this.buttonComboListAll.Size = new System.Drawing.Size(75, 23);
             this.buttonComboListAll.TabIndex = 3;
             this.buttonComboListAll.Text = ">>";
             this.buttonComboListAll.UseVisualStyleBackColor = true;
@@ -92,10 +88,9 @@ namespace WindowsFormsAppString
             // 
             // buttonListCombo
             // 
-            this.buttonListCombo.Location = new System.Drawing.Point(350, 187);
-            this.buttonListCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonListCombo.Location = new System.Drawing.Point(306, 140);
             this.buttonListCombo.Name = "buttonListCombo";
-            this.buttonListCombo.Size = new System.Drawing.Size(86, 31);
+            this.buttonListCombo.Size = new System.Drawing.Size(75, 23);
             this.buttonListCombo.TabIndex = 4;
             this.buttonListCombo.Text = "<";
             this.buttonListCombo.UseVisualStyleBackColor = true;
@@ -103,10 +98,9 @@ namespace WindowsFormsAppString
             // 
             // buttonListComboAll
             // 
-            this.buttonListComboAll.Location = new System.Drawing.Point(350, 236);
-            this.buttonListComboAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonListComboAll.Location = new System.Drawing.Point(306, 177);
             this.buttonListComboAll.Name = "buttonListComboAll";
-            this.buttonListComboAll.Size = new System.Drawing.Size(86, 31);
+            this.buttonListComboAll.Size = new System.Drawing.Size(75, 23);
             this.buttonListComboAll.TabIndex = 5;
             this.buttonListComboAll.Text = "<<";
             this.buttonListComboAll.UseVisualStyleBackColor = true;
@@ -116,9 +110,9 @@ namespace WindowsFormsAppString
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(85, 53);
+            this.label1.Location = new System.Drawing.Point(74, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Source";
             // 
@@ -126,37 +120,35 @@ namespace WindowsFormsAppString
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(616, 52);
+            this.label2.Location = new System.Drawing.Point(539, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 28);
+            this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cible";
             // 
             // buttonListHaut
             // 
-            this.buttonListHaut.Location = new System.Drawing.Point(521, 316);
-            this.buttonListHaut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonListHaut.Location = new System.Drawing.Point(456, 237);
             this.buttonListHaut.Name = "buttonListHaut";
-            this.buttonListHaut.Size = new System.Drawing.Size(86, 56);
+            this.buttonListHaut.Size = new System.Drawing.Size(75, 42);
             this.buttonListHaut.TabIndex = 8;
             this.buttonListHaut.UseVisualStyleBackColor = true;
             this.buttonListHaut.Click += new System.EventHandler(this.EventHaut);
             // 
             // buttonListBas
             // 
-            this.buttonListBas.Location = new System.Drawing.Point(693, 316);
-            this.buttonListBas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonListBas.Location = new System.Drawing.Point(606, 237);
             this.buttonListBas.Name = "buttonListBas";
-            this.buttonListBas.Size = new System.Drawing.Size(86, 56);
+            this.buttonListBas.Size = new System.Drawing.Size(75, 42);
             this.buttonListBas.TabIndex = 8;
             this.buttonListBas.UseVisualStyleBackColor = true;
             this.buttonListBas.Click += new System.EventHandler(this.EventBas);
             // 
             // FormListe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 464);
+            this.ClientSize = new System.Drawing.Size(721, 348);
             this.Controls.Add(this.buttonListBas);
             this.Controls.Add(this.buttonListHaut);
             this.Controls.Add(this.label2);
@@ -167,7 +159,6 @@ namespace WindowsFormsAppString
             this.Controls.Add(this.buttonComboList);
             this.Controls.Add(this.ComboBoxSource);
             this.Controls.Add(this.ListBoxCible);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormListe";
             this.Text = "Formulaire de Découverte des Listes";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

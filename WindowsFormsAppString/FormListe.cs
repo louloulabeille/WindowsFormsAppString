@@ -30,6 +30,12 @@ namespace WindowsFormsAppString
                 "Italie"
             };
             ComboBoxSource.Items.AddRange(items);
+            buttonComboListAll.Enabled = true;
+            buttonComboList.Enabled = true;
+            buttonListBas.Enabled = false;
+            buttonListHaut.Enabled = false;
+            buttonListComboAll.Enabled = false;
+            buttonListCombo.Enabled = false;
         }
 
         private void EventAjoutComboBoxListBox(object sender, EventArgs e)
@@ -38,7 +44,7 @@ namespace WindowsFormsAppString
             {
                 ListBoxCible.Items.Add(ComboBoxSource.SelectedItem);
                 ComboBoxSource.Items.RemoveAt(ComboBoxSource.SelectedIndex);
-                GestionButton();
+                GestionButton(sender);
             }
         }
 
@@ -51,7 +57,7 @@ namespace WindowsFormsAppString
                     ListBoxCible.Items.Add(item);
                 }
                 ComboBoxSource.Items.Clear();
-                GestionButton();
+                GestionButton(sender);
             }
         }
 
@@ -61,7 +67,7 @@ namespace WindowsFormsAppString
             {
                 ComboBoxSource.Items.Add(ListBoxCible.SelectedItem);
                 ListBoxCible.Items.RemoveAt(ListBoxCible.SelectedIndex);
-                GestionButton();
+                GestionButton(sender);
             } 
         }
 
@@ -74,7 +80,7 @@ namespace WindowsFormsAppString
                     ComboBoxSource.Items.Add(item);
                 }
                 ListBoxCible.Items.Clear();
-                GestionButton();
+                GestionButton(sender);
             }
         }
 
@@ -107,55 +113,63 @@ namespace WindowsFormsAppString
         /// désactive ou active les boutons de gestions de list
         /// </summary>
         /// <param name="sender"></param>
-        private void GestionButton( )
-        {            
-            switch (ListBoxCible.Items.Count)
+        private void GestionButton( object sender )
+        {
+            Button b = sender as Button;
+            if ( b.Name.ToString().Substring(0,1) != "buttonListCombo")
             {
-                case 0:
-                    buttonListComboAll.Enabled = true;
-                    buttonListCombo.Enabled = true;
-                    buttonComboListAll.Enabled = false;
-                    buttonComboList.Enabled = false;
-                    buttonListBas.Enabled = false;
-                    buttonListHaut.Enabled = false;
-                    break;
-                case 1:
-                    buttonListComboAll.Enabled = true;
-                    buttonListCombo.Enabled = true;
-                    buttonComboListAll.Enabled = true;
-                    buttonComboList.Enabled = true;
-                    buttonListBas.Enabled = false;
-                    buttonListHaut.Enabled = false;
-                    break;
-                default :
-                    buttonListComboAll.Enabled = true;
-                    buttonListCombo.Enabled = true;
-                    buttonComboListAll.Enabled  = false;
-                    buttonComboList.Enabled  = false;
-                    buttonListHaut.Enabled = true;
-                    buttonListBas.Enabled = true;
-                    break;
+                switch (ListBoxCible.Items.Count)
+                {
+                    case 0:
+                        buttonListComboAll.Enabled = true;
+                        buttonListCombo.Enabled = true;
+                        buttonComboListAll.Enabled = false;
+                        buttonComboList.Enabled = false;
+                        buttonListBas.Enabled = false;
+                        buttonListHaut.Enabled = false;
+                        break;
+                    case 1:
+                        buttonListComboAll.Enabled = true;
+                        buttonListCombo.Enabled = true;
+                        buttonComboListAll.Enabled = true;
+                        buttonComboList.Enabled = true;
+                        buttonListBas.Enabled = false;
+                        buttonListHaut.Enabled = false;
+                        break;
+                    default:
+                        buttonListComboAll.Enabled = true;
+                        buttonListCombo.Enabled = true;
+                        buttonComboListAll.Enabled = false;
+                        buttonComboList.Enabled = false;
+                        buttonListHaut.Enabled = true;
+                        buttonListBas.Enabled = true;
+                        break;
+                }
             }
 
-            switch (ComboBoxSource.Items.Count)
+            if (b.Name.ToString().Substring(0, 15) == "buttonListCombo")
             {
-                case 0:
-                    buttonListComboAll.Enabled = true;
-                    buttonListCombo.Enabled = true;
-                    buttonComboListAll.Enabled = false;
-                    buttonComboList.Enabled = false;
-                    buttonListHaut.Enabled = true;
-                    buttonListBas.Enabled = true;
-                    break;
-                default:
-                    buttonListComboAll.Enabled = true;
-                    buttonListCombo.Enabled = true;
-                    buttonComboListAll.Enabled = true;
-                    buttonComboList.Enabled = true;
-                    buttonListHaut.Enabled = true;
-                    buttonListBas.Enabled = true;
-                    break;
+                switch (ComboBoxSource.Items.Count)
+                {
+                    case 0:
+                        buttonListComboAll.Enabled = true;
+                        buttonListCombo.Enabled = true;
+                        buttonComboListAll.Enabled = false;
+                        buttonComboList.Enabled = false;
+                        buttonListHaut.Enabled = true;
+                        buttonListBas.Enabled = true;
+                        break;
+                    default:
+                        buttonListComboAll.Enabled = true;
+                        buttonListCombo.Enabled = true;
+                        buttonComboListAll.Enabled = true;
+                        buttonComboList.Enabled = true;
+                        buttonListHaut.Enabled = true;
+                        buttonListBas.Enabled = true;
+                        break;
+                }
             }
+            
         }
     }
 
